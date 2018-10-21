@@ -12,7 +12,8 @@ namespace CBTD {
         private:
             bool m_LoadingScene;
             std::string m_Name;
-        
+            int m_Id;
+
         protected:
             bool m_Loaded;
             SceneRuntime* m_Runtime;
@@ -33,8 +34,10 @@ namespace CBTD {
             bool IsLoaded() const;
             const std::string& GetName();
             const std::string& GetName() const;
+            int GetId();
 
             friend class SceneRuntime;
+            friend class SceneManager;
         };
     }
 }

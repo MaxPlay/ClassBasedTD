@@ -37,11 +37,17 @@ const std::string& Scene::GetName() const
 
 void Scene::LoadScene(std::string name)
 {
-    
+    m_Runtime->LoadScene(name);
 }
 
 void Scene::LoadScene(int id)
 {
+    m_Runtime->LoadScene(id);
+}
+
+int Scene::GetId()
+{
+    return m_Id;
 }
 
 Scene::Scene()

@@ -11,8 +11,9 @@ namespace CBTD {
             Rendering::Camera* m_Camera;
             Rendering::MapRenderer* m_MapRenderer;
             Game::Map* m_Map;
-            sf::Texture texture;
+            int texture;
             sf::Sprite sprite;
+            sf::Time time;
 
         public:
             using Scene::Scene;

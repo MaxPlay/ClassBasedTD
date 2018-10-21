@@ -5,7 +5,12 @@ namespace CBTD {
     namespace Assets {
         class Texture
         {
-            sf::Texture texture;
+            sf::Texture m_Texture;
+            std::string m_File;
+
+        public:
+            void Load(std::string file);
+            sf::Texture* GetTexture();
         };
     }
 }

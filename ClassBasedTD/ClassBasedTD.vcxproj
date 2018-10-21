@@ -170,6 +170,9 @@ xcopy /y $(SolutionDir)Dependencies\$(PlatformTarget)\SFML-2.5.0\bin\openal32.dl
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Assets\AssetManagement.cpp" />
+    <ClCompile Include="Assets\Texture.cpp" />
+    <ClCompile Include="Assets\TextureAtlas.cpp" />
     <ClCompile Include="Core\Application.cpp" />
     <ClCompile Include="Core\Settings.cpp" />
     <ClCompile Include="Game\Tile.cpp" />
@@ -187,6 +190,8 @@ xcopy /y $(SolutionDir)Dependencies\$(PlatformTarget)\SFML-2.5.0\bin\openal32.dl
     <ClCompile Include="Scenes\SceneLoading.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Assets\AssetManagement.h" />
+    <ClInclude Include="Assets\AssetManager.h" />
     <ClInclude Include="Assets\Texture.h" />
     <ClInclude Include="Assets\TextureAtlas.h" />
     <ClInclude Include="Core\Application.h" />

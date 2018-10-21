@@ -14,7 +14,7 @@ namespace CBTD {
             std::map<std::string, int> m_IdLookup;
             int m_CurrentLoadingScene;
             int m_CurrentScene;
-            int m_idPool;
+            int m_IdPool;
 
         public:
             SceneManager();

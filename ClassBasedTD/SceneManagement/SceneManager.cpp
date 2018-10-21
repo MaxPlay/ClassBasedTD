@@ -4,7 +4,7 @@
 using namespace CBTD;
 using namespace SceneManagement;
 
-SceneManager::SceneManager() : m_idPool(0), m_CurrentLoadingScene(-1), m_CurrentScene(-1)
+SceneManager::SceneManager() : m_IdPool(0), m_CurrentLoadingScene(-1), m_CurrentScene(-1)
 {
     m_Scenes = std::map<int, Scene*>();
     m_LoadingScenes = std::map<int, Scene*>();
@@ -18,11 +18,12 @@ SceneManager::~SceneManager()
 
 int SceneManager::AddScene(Scene * scene)
 {
-    int newID = m_idPool++;
+    int newID = m_IdPool++;
     m_IdLookup[scene->GetName()] = newID;
     if (scene->IsLoadingScene())
         m_LoadingScenes[newID] = scene;
     m_Scenes[newID] = scene;
+    scene->m_Id = newID;
     return 0;
 }
 

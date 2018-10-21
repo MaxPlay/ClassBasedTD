@@ -6,6 +6,9 @@ namespace CBTD {
         class TextureAtlas
         {
             Texture* texture;
+
+        protected:
+            void Load(std::string file);
         };
     }
 }
