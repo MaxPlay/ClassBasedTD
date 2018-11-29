@@ -332,3 +332,10 @@ ASALocalRun/
 
 # Local History for Visual Studio
 .localhistory/
+
+# Dependencies
+!/[Dd]ependencies/*
+!/[Dd]ependencies/*/SFML-2.5.0/bin/
+!/[Dd]ependencies/*.dll
+[Dd]ependencies/*/SFML-2.5.0/doc/
+[Dd]ependencies/*/SFML-2.5.0/examples/
