@@ -6,7 +6,7 @@
 using namespace CBTD;
 using namespace SceneManagement;
 
-SceneRuntime::SceneRuntime(SceneManager * manager, Rendering::GameWindow* window)
+SceneRuntime::SceneRuntime(SceneManager * manager, Rendering::GameWindow* window) : m_CurrentClearColor(0, 0, 0, 255)
 {
     m_Manager = manager;
     m_Window = window;
@@ -76,14 +76,35 @@ void SceneRuntime::Update(sf::Time& elapsedTime)
 
 void SceneRuntime::Render(sf::Time& elapsedTime)
 {
-    m_Window->GetWindow()->clear();
+    m_Window->GetWindow()->clear(m_CurrentClearColor);
     if (m_LoadingScene)
         m_LoadingScene->Render(elapsedTime);
     else
         m_CurrentScene->Render(elapsedTime);
 }
 
+void SceneRuntime::SetCurrentClearColor(sf::Uint8 r, sf::Uint8 g, sf::Uint8 b, sf::Uint8 a)
+{
+    m_CurrentClearColor.r = r;
+    m_CurrentClearColor.g = g;
+    m_CurrentClearColor.b = b;
+    m_CurrentClearColor.a = a;
+}
+
+void SceneRuntime::SetCurrentClearColor(sf::Color & color)
+{
+    m_CurrentClearColor.r = color.r;
+    m_CurrentClearColor.g = color.g;
+    m_CurrentClearColor.b = color.b;
+    m_CurrentClearColor.a = color.a;
+}
+
 Rendering::GameWindow * SceneRuntime::GetWindow()
 {
     return m_Window;
+}
+
+sf::Color & SceneRuntime::GetCurrentClearColor()
+{
+    return m_CurrentClearColor;
 }

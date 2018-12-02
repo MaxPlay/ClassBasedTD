@@ -2,6 +2,7 @@
 
 using namespace CBTD;
 using namespace Game;
+using namespace Level;
 
 Tile::Tile() : TextureID(0), Collision(false), Tower(0)
 {

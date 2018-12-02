@@ -2,6 +2,7 @@
 
 using namespace CBTD;
 using namespace Game;
+using namespace Level;
 
 Map::Map(unsigned int width, unsigned int height) : m_Width(width), m_Height(height), m_Count(width * height)
 {
@@ -30,17 +31,17 @@ void Map::GenerateCollision()
         m_Tiles[i].GenerateCollision();
 }
 
-int CBTD::Game::Map::GetHeight()
+int Map::GetHeight()
 {
     return m_Height;
 }
 
-int CBTD::Game::Map::GetWidth()
+int Map::GetWidth()
 {
     return m_Width;
 }
 
-int CBTD::Game::Map::GetCount()
+int Map::GetCount()
 {
     return m_Count;
 }

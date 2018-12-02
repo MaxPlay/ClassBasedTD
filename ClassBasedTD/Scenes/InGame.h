@@ -1,7 +1,7 @@
 #pragma once
 #include "../SceneManagement/Scene.h"
 #include "../Rendering.h"
-#include "../Game/Map.h"
+#include "Game.h"
 
 namespace CBTD {
     namespace Scenes {
@@ -10,10 +10,9 @@ namespace CBTD {
         private:
             Rendering::Camera* m_Camera;
             Rendering::MapRenderer* m_MapRenderer;
-            Game::Map* m_Map;
-            int texture;
-            sf::Sprite sprite;
-            sf::Time time;
+            Game::Level::Map* m_Map;
+            Game::Players::Player* m_Player;
+            sf::CircleShape m_PlayerShape;
 
         public:
             using Scene::Scene;

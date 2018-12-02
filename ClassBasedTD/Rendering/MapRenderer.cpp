@@ -3,7 +3,7 @@
 using namespace CBTD;
 using namespace Rendering;
 
-MapRenderer::MapRenderer(Game::Map * map) : m_map(map)
+MapRenderer::MapRenderer(Game::Level::Map * map) : m_map(map)
 {
     m_shape = sf::RectangleShape(sf::Vector2f(10.f, 10.f));
 }

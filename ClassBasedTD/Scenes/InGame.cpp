@@ -1,4 +1,6 @@
 #include "InGame.h"
+#include <SFML/Window.hpp>
+
 #include "SceneManagement/SceneRuntime.h"
 #include "Assets/AssetManagement.h"
 
@@ -8,13 +10,11 @@ using namespace Scenes;
 void InGame::Load()
 {
     m_Camera = new Rendering::Camera(m_Runtime->GetWindow()->GetWindow());
-    m_Map = new Game::Map(10, 10);
+    m_Map = new Game::Level::Map(10, 10);
     m_MapRenderer = new Rendering::MapRenderer(m_Map);
+    m_Player = new Game::Players::Player(nullptr);
     m_Loaded = true;
-
-    texture = Assets::AssetManagement::GetTextureManager()->RequestAsset("D:\\Repos\\ClassBasedTD\\bin\\x86\\Debug\\vanGogh.png", this);
-    sprite = sf::Sprite(*(Assets::AssetManagement::GetTextureManager()->GetAsset(texture)->GetTexture()));
-    time = sf::Time();
+    m_Runtime->SetCurrentClearColor(120, 150, 15, 255);
 }
 
 void InGame::Unload()
@@ -27,15 +27,11 @@ void InGame::Unload()
 
 void InGame::Update(sf::Time & elapsedTime)
 {
-    time += elapsedTime;
-    if (time.asSeconds() > 4)
-    {
-        LoadScene(GetId());
-    }
+    m_Player->UpdateInput();
 }
 
 void InGame::Render(sf::Time & elapsedTime)
 {
     m_MapRenderer->Draw(*m_Camera, *(m_Runtime->GetWindow()->GetWindow()));
-    m_Runtime->GetWindow()->GetWindow()->draw(sprite);
+    m_Runtime->GetWindow()->GetWindow()->draw(m_PlayerShape);
 }

@@ -2,7 +2,7 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 
 #include "Camera.h"
-#include "../Game/Map.h"
+#include "../Game/Level/Map.h"
 
 namespace CBTD {
     namespace Rendering {
@@ -10,11 +10,11 @@ namespace CBTD {
         class MapRenderer
         {
         private:
-            Game::Map* m_map;
+            Game::Level::Map* m_map;
             sf::RectangleShape m_shape;
 
         public:
-            MapRenderer(Game::Map* map);
+            MapRenderer(Game::Level::Map* map);
             ~MapRenderer();
             void Draw(Camera& camera, sf::RenderTarget& target);
         };
