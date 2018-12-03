@@ -18,8 +18,8 @@ namespace CBTD {
         public:
             AssetManager();
 
-            T* GetAsset(std::string file);
-            T* GetAsset(int id);
+            T* GetAsset(std::string file) const;
+            T* GetAsset(int id) const;
             bool HasAsset(int id);
             int RequestAsset(std::string file, SceneManagement::Scene* scene);
             void UnloadAsset(std::string file);
@@ -48,13 +48,13 @@ namespace CBTD {
         }
 
         template<class T>
-        inline T * AssetManager<T>::GetAsset(std::string file)
+        inline T * AssetManager<T>::GetAsset(std::string file) const
         {
             return m_Assets[m_AssetFiles[file]];
         }
 
         template<class T>
-        inline T * AssetManager<T>::GetAsset(int id)
+        inline T * AssetManager<T>::GetAsset(int id) const
         {
             return m_Assets[id];
         }

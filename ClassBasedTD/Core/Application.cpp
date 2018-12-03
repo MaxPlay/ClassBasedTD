@@ -20,12 +20,12 @@ Application::Application()
     m_SceneManager->SetCurrentLoadingScene("loading");
 }
 
-const SceneManagement::SceneManager * Application::GetSceneManager()
+const SceneManagement::SceneManager * Application::GetSceneManager() const
 {
     return m_SceneManager;
 }
 
-const Rendering::GameWindow & CBTD::Core::Application::GetWindow()
+const Rendering::GameWindow & CBTD::Core::Application::GetWindow() const
 {
     return *m_Window;
 }

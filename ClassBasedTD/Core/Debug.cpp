@@ -107,22 +107,22 @@ void Debug::Init(bool color, bool flavor, bool logfile, bool timestamp)
     SLog(oss.str());
 }
 
-bool Debug::GetUseColor()
+bool Debug::GetUseColor() const
 {
     return m_UseColor;
 }
 
-bool Debug::GetUseTimestamp()
+bool Debug::GetUseTimestamp() const
 {
     return m_UseTimestamp;
 }
 
-bool Debug::GetUseFlavor()
+bool Debug::GetUseFlavor() const
 {
     return m_UseFlavor;
 }
 
-bool Debug::GetUseLogfile()
+bool Debug::GetUseLogfile() const
 {
     return m_UseLogfile;
 }

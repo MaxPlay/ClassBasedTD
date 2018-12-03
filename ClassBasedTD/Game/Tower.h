@@ -34,7 +34,7 @@ namespace CBTD {
 
             virtual void Upgrade() = 0;
             virtual void Downgrade() = 0;
-            TowerData& GetData();
+            TowerData& GetData() const;
             void Buff(float amount);
         };
     }

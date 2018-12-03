@@ -13,7 +13,7 @@ namespace CBTD {
                 unsigned int m_Height;
                 unsigned int m_Width;
                 unsigned int m_Count;
-                Tile m_DefaultTile;
+                const Tile m_DefaultTile;
                 Tile* m_Tiles;
                 Waves* m_Waves;
 
@@ -21,12 +21,12 @@ namespace CBTD {
                 Map(unsigned int width, unsigned int height);
                 ~Map();
 
-                Tile& GetTile(unsigned int x, unsigned int y);
+                const Tile& GetTile(unsigned int x, unsigned int y) const;
                 void GenerateCollision();
 
-                int GetHeight();
-                int GetWidth();
-                int GetCount();
+                int GetHeight() const;
+                int GetWidth() const;
+                int GetCount() const;
 
                 static Map* CreateAndLoad(const std::string* file);
             };

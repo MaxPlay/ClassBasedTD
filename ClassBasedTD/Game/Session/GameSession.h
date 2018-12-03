@@ -1,4 +1,6 @@
 #pragma once
+#include <array>
+#include "Core/Globals.h"
 #include "GameSessionTemplate.h"
 
 #include "Game/Players/Player.h"
@@ -9,8 +11,7 @@ namespace CBTD {
             class GameSession
             {
                 int m_PlayerCount;
-                Players::Player* m_Players[];
-
+                std::array<Players::Player*, Core::Globals::MAX_PLAYER_COUNT> m_Players;
 
             public:
                 GameSession* CreateSession(const GameSessionTemplate& sessionTemplate);

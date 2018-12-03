@@ -14,7 +14,6 @@ namespace CBTD {
                 Player(const Session::PlayerTemplate* playerTemplate);
 
                 void UpdateInput();
-                const sf::Vector2f& GetPosition();
                 const sf::Vector2f& GetPosition() const;
             };
         }

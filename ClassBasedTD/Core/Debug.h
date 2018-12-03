@@ -48,10 +48,10 @@ namespace CBTD {
         public:
             static void Init(bool useColor = true, bool useFlavor = true, bool useLogfile = true, bool useTimestamp = true);
 
-            bool GetUseColor();
-            bool GetUseTimestamp();
-            bool GetUseFlavor();
-            bool GetUseLogfile();
+            bool GetUseColor() const;
+            bool GetUseTimestamp() const;
+            bool GetUseFlavor() const;
+            bool GetUseLogfile() const;
 
             void UseColor(bool useColor);
             void UseTimestamp(bool useTimestamp);

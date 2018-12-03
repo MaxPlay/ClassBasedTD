@@ -34,7 +34,7 @@ namespace CBTD {
             void SetCurrentClearColor(sf::Uint8 r, sf::Uint8 g, sf::Uint8 b, sf::Uint8 a);
             void SetCurrentClearColor(sf::Color& color);
 
-            Rendering::GameWindow* GetWindow();
+            Rendering::GameWindow* GetWindow() const;
             sf::Color& GetCurrentClearColor();
         };
     }

@@ -15,9 +15,9 @@ namespace CBTD {
             void Show();
             void Hide();
             void Apply(bool recreateWindow = true);
-            bool IsOpen();
-            bool IsFullscreen();
-            sf::RenderWindow* GetWindow();
+            bool IsOpen() const;
+            bool IsFullscreen() const;
+            sf::RenderWindow* GetWindow() const;
         };
     }
 }

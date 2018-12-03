@@ -13,27 +13,27 @@ Camera::~Camera()
 {
 }
 
-sf::Vector2f Camera::GetPosition()
+sf::Vector2f Camera::GetPosition() const
 {
     return m_position;
 }
 
-float Camera::GetRotation()
+float Camera::GetRotation() const
 {
     return m_rotation;
 }
 
-float Camera::GetZoom()
+float Camera::GetZoom() const
 {
     return 1 / m_zoom;
 }
 
-const sf::RenderTarget* Camera::GetTarget()
+const sf::RenderTarget* Camera::GetTarget() const
 {
     return m_target;
 }
 
-const sf::View & Camera::GetView()
+const sf::View & Camera::GetView() const
 {
     return m_view;
 }

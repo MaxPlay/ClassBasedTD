@@ -9,10 +9,9 @@ namespace CBTD {
         {
         private:
             Rendering::Camera* m_Camera;
-            Rendering::MapRenderer* m_MapRenderer;
+            Rendering::RendererCollection* m_Renderers;
             Game::Level::Map* m_Map;
             Game::Players::Player* m_Player;
-            sf::CircleShape m_PlayerShape;
 
         public:
             using Scene::Scene;

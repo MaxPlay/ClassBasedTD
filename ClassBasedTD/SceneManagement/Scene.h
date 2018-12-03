@@ -30,11 +30,9 @@ namespace CBTD {
             virtual void Render(sf::Time& elapsedTime) = 0;
             bool IsLoadingScene();
             void SetIsLoadingScene(bool isLoadingScene);
-            bool IsLoaded();
             bool IsLoaded() const;
-            const std::string& GetName();
             const std::string& GetName() const;
-            int GetId();
+            int GetId() const;
 
             friend class SceneRuntime;
             friend class SceneManager;

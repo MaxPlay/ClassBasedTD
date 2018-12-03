@@ -27,7 +27,7 @@ int SceneManager::AddScene(Scene * scene)
     return 0;
 }
 
-Scene & SceneManager::GetScene(const std::string name)
+Scene & SceneManager::GetScene(const std::string name) const
 {
     if (m_IdLookup.find(name) == m_IdLookup.end())
         return GetScene(m_CurrentScene);
@@ -35,29 +35,29 @@ Scene & SceneManager::GetScene(const std::string name)
     return GetScene(id);
 }
 
-Scene & SceneManager::GetScene(int id)
+Scene & SceneManager::GetScene(int id) const
 {
     if (m_Scenes.find(id) == m_Scenes.end())
         return GetScene(m_CurrentScene);
     return *(m_Scenes.at(id));
 }
 
-Scene * SceneManager::GetCurrentScene()
+Scene * SceneManager::GetCurrentScene() const
 {
-    return m_Scenes[m_CurrentScene];
+    return m_Scenes.at(m_CurrentScene);
 }
 
-int SceneManager::GetCurrentSceneID()
+int SceneManager::GetCurrentSceneID() const
 {
     return m_CurrentScene;
 }
 
-Scene * SceneManager::GetCurrentLoadingScene()
+Scene * SceneManager::GetCurrentLoadingScene() const
 {
     return m_LoadingScenes.at(m_CurrentLoadingScene);
 }
 
-int SceneManager::GetCurrentLoadingSceneID()
+int SceneManager::GetCurrentLoadingSceneID() const
 {
     return m_CurrentLoadingScene;
 }
@@ -104,12 +104,12 @@ void SceneManager::SetCurrentLoadingScene(Scene & scene)
     m_CurrentLoadingScene = m_IdLookup[scene.GetName()];
 }
 
-int SceneManager::GetSceneCount()
+int SceneManager::GetSceneCount() const
 {
-    return m_Scenes.size();
+    return (int)m_Scenes.size();
 }
 
-int SceneManager::GetLoadingSceneCount()
+int SceneManager::GetLoadingSceneCount() const
 {
-    return m_LoadingScenes.size();
+    return (int)m_LoadingScenes.size();
 }

@@ -24,8 +24,8 @@ namespace CBTD {
             bool m_Running;
 
         public:
-            const SceneManagement::SceneManager* GetSceneManager();
-            const Rendering::GameWindow& GetWindow();
+            const SceneManagement::SceneManager* GetSceneManager() const;
+            const Rendering::GameWindow& GetWindow() const;
             void Run();
             void Exit();
             bool IsRunning();

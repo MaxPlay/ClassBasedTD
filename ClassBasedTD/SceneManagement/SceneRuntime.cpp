@@ -99,7 +99,7 @@ void SceneRuntime::SetCurrentClearColor(sf::Color & color)
     m_CurrentClearColor.a = color.a;
 }
 
-Rendering::GameWindow * SceneRuntime::GetWindow()
+Rendering::GameWindow * SceneRuntime::GetWindow() const
 {
     return m_Window;
 }

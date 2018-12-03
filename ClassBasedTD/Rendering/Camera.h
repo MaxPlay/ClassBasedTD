@@ -9,11 +9,11 @@ namespace CBTD {
             Camera(sf::RenderTarget* target);
             ~Camera();
 
-            sf::Vector2f GetPosition();
-            float GetRotation();
-            float GetZoom();
-            const sf::RenderTarget* GetTarget();
-            const sf::View& GetView();
+            sf::Vector2f GetPosition() const;
+            float GetRotation() const;
+            float GetZoom() const;
+            const sf::RenderTarget* GetTarget() const;
+            const sf::View& GetView() const;
 
             void SetPosition(float x, float y);
             void SetPosition(sf::Vector2f pos);

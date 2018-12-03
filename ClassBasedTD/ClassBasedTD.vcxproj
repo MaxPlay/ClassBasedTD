@@ -181,7 +181,9 @@ xcopy /y $(SolutionDir)Dependencies\$(PlatformTarget)\SFML-2.5.0\bin\openal32.dl
     <ClCompile Include="Game\Level\Map.cpp" />
     <ClCompile Include="Rendering\Camera.cpp" />
     <ClCompile Include="Rendering\GameWindow.cpp" />
-    <ClCompile Include="Rendering\MapRenderer.cpp" />
+    <ClCompile Include="Rendering\RendererCollection.cpp" />
+    <ClCompile Include="Rendering\Renderers\MapRenderer.cpp" />
+    <ClCompile Include="Rendering\Renderers\PlayerRenderer.cpp" />
     <ClCompile Include="SceneManagement\Scene.cpp" />
     <ClCompile Include="SceneManagement\SceneManager.cpp" />
     <ClCompile Include="Core\Debug.cpp" />
@@ -213,8 +215,11 @@ xcopy /y $(SolutionDir)Dependencies\$(PlatformTarget)\SFML-2.5.0\bin\openal32.dl
     <ClInclude Include="Rendering.h" />
     <ClInclude Include="Rendering\Camera.h" />
     <ClInclude Include="Game\Level\Map.h" />
-    <ClInclude Include="Rendering\MapRenderer.h" />
+    <ClInclude Include="Rendering\RendererCollection.h" />
+    <ClInclude Include="Rendering\Renderers\MapRenderer.h" />
     <ClInclude Include="Rendering\GameWindow.h" />
+    <ClInclude Include="Rendering\Renderer.h" />
+    <ClInclude Include="Rendering\Renderers\PlayerRenderer.h" />
     <ClInclude Include="SceneManagement.h" />
     <ClInclude Include="SceneManagement\Scene.h" />
     <ClInclude Include="Scenes\Loading.h" />

@@ -42,17 +42,17 @@ void GameWindow::Apply(bool recreateWindow)
     Show();
 }
 
-bool GameWindow::IsOpen()
+bool GameWindow::IsOpen() const
 {
     return m_Open;
 }
 
-bool GameWindow::IsFullscreen()
+bool GameWindow::IsFullscreen() const
 {
     return m_Fullscreen;
 }
 
-sf::RenderWindow * GameWindow::GetWindow()
+sf::RenderWindow * GameWindow::GetWindow() const
 {
     return m_Window;
 }

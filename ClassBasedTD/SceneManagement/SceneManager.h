@@ -21,20 +21,20 @@ namespace CBTD {
             ~SceneManager();
 
             int AddScene(Scene* scene);
-            Scene& GetScene(const std::string name);
-            Scene& GetScene(int id);
-            Scene* GetCurrentScene();
-            int GetCurrentSceneID();
-            Scene* GetCurrentLoadingScene();
-            int GetCurrentLoadingSceneID();
+            Scene& GetScene(const std::string name) const;
+            Scene& GetScene(int id) const;
+            Scene* GetCurrentScene() const;
+            int GetCurrentSceneID() const;
+            Scene* GetCurrentLoadingScene() const;
+            int GetCurrentLoadingSceneID() const;
             void SetCurrentScene(int id);
             void SetCurrentScene(std::string name);
             void SetCurrentScene(Scene& scene);
             void SetCurrentLoadingScene(int id);
             void SetCurrentLoadingScene(std::string name);
             void SetCurrentLoadingScene(Scene& scene);
-            int GetSceneCount();
-            int GetLoadingSceneCount();
+            int GetSceneCount() const;
+            int GetLoadingSceneCount() const;
         };
     }
 }

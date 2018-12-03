@@ -14,11 +14,6 @@ void Player::UpdateInput()
 
 }
 
-const sf::Vector2f & Player::GetPosition()
-{
-    return m_Position;
-}
-
 const sf::Vector2f & Player::GetPosition() const
 {
     return m_Position;

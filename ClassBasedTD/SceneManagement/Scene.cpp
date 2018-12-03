@@ -15,19 +15,9 @@ void Scene::SetIsLoadingScene(bool isLoadingScene)
     m_LoadingScene = isLoadingScene;
 }
 
-bool Scene::IsLoaded()
-{
-    return m_Loaded;
-}
-
 bool Scene::IsLoaded() const
 {
     return m_Loaded;
-}
-
-const std::string& Scene::GetName()
-{
-    return m_Name;
 }
 
 const std::string& Scene::GetName() const
@@ -45,7 +35,7 @@ void Scene::LoadScene(int id)
     m_Runtime->LoadScene(id);
 }
 
-int Scene::GetId()
+int Scene::GetId() const
 {
     return m_Id;
 }
