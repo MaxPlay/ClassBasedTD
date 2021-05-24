@@ -4,7 +4,6 @@
 #include <fstream>
 
 using namespace CBTD;
-using namespace Assets;
 
 void TextureAtlas::Load(std::string file)
 {

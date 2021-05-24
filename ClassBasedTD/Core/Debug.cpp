@@ -4,7 +4,6 @@
 #include "Debug.h"
 
 using namespace CBTD;
-using namespace Core;
 
 Debug* Debug::s_Instance = nullptr;
 

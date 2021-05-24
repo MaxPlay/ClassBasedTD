@@ -22,32 +22,32 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{A6343391-1CF8-4369-9168-0DD453978229}</ProjectGuid>
     <RootNamespace>ClassBasedTD</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -198,10 +198,11 @@ xcopy /y $(SolutionDir)Dependencies\$(PlatformTarget)\SFML-2.5.0\bin\openal32.dl
     <ClInclude Include="Assets\Texture.h" />
     <ClInclude Include="Assets\TextureAtlas.h" />
     <ClInclude Include="Core\Application.h" />
+    <ClInclude Include="Core\BaseTypes\Name.h" />
     <ClInclude Include="Core\Settings.h" />
-    <ClInclude Include="Game.h" />
     <ClInclude Include="Game\Level\Wave.h" />
     <ClInclude Include="Game\Level\Waves.h" />
+    <ClInclude Include="Game\Players\PlayerAction.h" />
     <ClInclude Include="Game\Players\Player.h" />
     <ClInclude Include="Game\Session\PlayerControlType.h" />
     <ClInclude Include="Game\Session\PlayerClass.h" />
@@ -212,7 +213,8 @@ xcopy /y $(SolutionDir)Dependencies\$(PlatformTarget)\SFML-2.5.0\bin\openal32.dl
     <ClInclude Include="Game\Level\Tile.h" />
     <ClInclude Include="Game\Tower.h" />
     <ClInclude Include="Core.h" />
-    <ClInclude Include="Rendering.h" />
+    <ClInclude Include="Input\Gamepad.h" />
+    <ClInclude Include="Input\GamePadState.h" />
     <ClInclude Include="Rendering\Camera.h" />
     <ClInclude Include="Game\Level\Map.h" />
     <ClInclude Include="Rendering\RendererCollection.h" />
@@ -220,14 +222,12 @@ xcopy /y $(SolutionDir)Dependencies\$(PlatformTarget)\SFML-2.5.0\bin\openal32.dl
     <ClInclude Include="Rendering\GameWindow.h" />
     <ClInclude Include="Rendering\Renderer.h" />
     <ClInclude Include="Rendering\Renderers\PlayerRenderer.h" />
-    <ClInclude Include="SceneManagement.h" />
     <ClInclude Include="SceneManagement\Scene.h" />
     <ClInclude Include="Scenes\Loading.h" />
     <ClInclude Include="Scenes\SceneLoading.h" />
     <ClInclude Include="SceneManagement\SceneManager.h" />
     <ClInclude Include="Core\Debug.h" />
     <ClInclude Include="SceneManagement\SceneRuntime.h" />
-    <ClInclude Include="Scenes.h" />
     <ClInclude Include="Scenes\InGame.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

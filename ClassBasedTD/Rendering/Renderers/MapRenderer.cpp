@@ -2,10 +2,8 @@
 #include "Core/Globals.h"
 
 using namespace CBTD;
-using namespace Rendering;
-using namespace Renderers;
 
-MapRenderer::MapRenderer(Game::Level::Map * map, int priority) : m_map(map), m_TileSize(Core::Globals::TILE_SIZE), Renderer(priority)
+MapRenderer::MapRenderer(const Map& map, int priority) : m_map(&map), m_TileSize(Globals::TILE_SIZE), Renderer(priority)
 {
     m_shape = sf::RectangleShape(sf::Vector2f((float)m_TileSize, (float)m_TileSize));
 }

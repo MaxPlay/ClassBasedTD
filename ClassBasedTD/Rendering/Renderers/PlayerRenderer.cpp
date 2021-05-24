@@ -2,12 +2,10 @@
 #include "Core/Globals.h"
 
 using namespace CBTD;
-using namespace Rendering;
-using namespace Renderers;
 
-PlayerRenderer::PlayerRenderer(Game::Players::Player * player, int priority) : m_Player(player), Renderer(priority)
+PlayerRenderer::PlayerRenderer(Player * player, int priority) : m_Player(player), Renderer(priority)
 {
-    m_Shape = sf::CircleShape(Core::Globals::TILE_SIZE / 2);
+    m_Shape = sf::CircleShape(Globals::TILE_SIZE / 2);
     m_Shape.setFillColor(sf::Color(0, 255, 255, 255));
 }
 

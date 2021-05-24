@@ -2,7 +2,6 @@
 #include "../Core/Settings.h"
 
 using namespace CBTD;
-using namespace Rendering;
 
 GameWindow::GameWindow()
 {
@@ -32,7 +31,7 @@ void GameWindow::Hide()
 
 void GameWindow::Apply(bool recreateWindow)
 {
-    auto settings = Core::Settings::GetSettings().GetVideoSettings();
+    const VideoSettings& settings = Settings::GetSettings().GetVideoSettings();
     if (recreateWindow)
         m_Window->create(settings.Mode, settings.Title, settings.Fullscreen ? sf::Style::Fullscreen : sf::Style::Default, settings.Context);
     //TODO: Set Icon m_Window->setIcon()
@@ -52,7 +51,7 @@ bool GameWindow::IsFullscreen() const
     return m_Fullscreen;
 }
 
-sf::RenderWindow * GameWindow::GetWindow() const
+sf::RenderWindow* GameWindow::GetWindow() const
 {
     return m_Window;
 }

@@ -1,9 +1,7 @@
 #include "Scene.h"
-
 #include "SceneRuntime.h"
 
 using namespace CBTD;
-using namespace SceneManagement;
 
 bool Scene::IsLoadingScene()
 {

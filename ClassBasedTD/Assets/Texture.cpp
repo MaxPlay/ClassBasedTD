@@ -1,7 +1,6 @@
 #include "Texture.h"
 
 using namespace CBTD;
-using namespace Assets;
 
 void Texture::Load(std::string file)
 {

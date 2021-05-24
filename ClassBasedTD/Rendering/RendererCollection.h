@@ -5,31 +5,32 @@
 #include "Renderer.h"
 #include "Camera.h"
 
-namespace CBTD {
-    namespace Rendering {
-        class RendererCollection
-        {
-            const Camera* m_Camera;
-            std::vector<class Renderer*> m_Renderers;
-            bool m_Unique;
+namespace CBTD
+{
+    class Renderer;
 
-        public:
-            RendererCollection(bool unique = false);
-            ~RendererCollection();
+    class RendererCollection
+    {
+        const Camera* m_Camera;
+        std::vector<Renderer*> m_Renderers;
+        bool m_Unique;
 
-            bool AddRenderer(Renderer* renderer);
-            bool RemoveRenderer(Renderer* renderer);
-            
-            bool Contains(Renderer* renderer) const;
-            void Order();
-            void OrderDescending();
+    public:
+        RendererCollection(bool unique = false);
+        ~RendererCollection();
 
-            void Draw(sf::RenderTarget& target);
-            void Dispose();
-            void DisposeAndClear();
-            void Clear();
+        bool AddRenderer(Renderer& renderer);
+        bool RemoveRenderer(Renderer& renderer);
 
-            void SetCamera(const Camera* camera);
-        };
-    }
+        bool Contains(const Renderer& renderer) const;
+        void Order();
+        void OrderDescending();
+
+        void Draw(sf::RenderTarget& target);
+        void Dispose();
+        void DisposeAndClear();
+        void Clear();
+
+        void SetCamera(const Camera* camera);
+    };
 }

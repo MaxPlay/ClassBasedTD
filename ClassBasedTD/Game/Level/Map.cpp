@@ -1,8 +1,6 @@
 #include "Map.h"
 
 using namespace CBTD;
-using namespace Game;
-using namespace Level;
 
 Map::Map(unsigned int width, unsigned int height) : m_Width(width), m_Height(height), m_Count(width * height), m_DefaultTile()
 {

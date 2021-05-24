@@ -1,11 +1,13 @@
 #include "SceneLoading.h"
-#include "Scenes.h"
 #include "SceneManagement/SceneManager.h"
 
-using namespace CBTD;
-using namespace Scenes;
+#include "Scenes/InGame.h"
+#include "Scenes/Loading.h"
 
-void CBTD::LoadScenes(SceneManagement::SceneManager * manager)
+
+using namespace CBTD;
+
+void CBTD::LoadScenes(SceneManager* manager)
 {
     manager->AddScene(new InGame("ingame"));
     manager->AddScene(new Loading("loading", true));

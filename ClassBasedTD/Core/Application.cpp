@@ -3,29 +3,27 @@
 
 #include "Settings.h"
 #include "SceneManagement/SceneRuntime.h"
-#include "Scenes.h"
 
 using namespace CBTD;
-using namespace Core;
 
 Application* Application::s_Instance = 0;
 
 Application::Application()
 {
     Debug::Init(true, true, false, true);
-    m_SceneManager = new SceneManagement::SceneManager();
+    m_SceneManager = new SceneManager();
     Settings::GetSettings().Load();
-    m_Window = new Rendering::GameWindow();
+    m_Window = new GameWindow();
     m_SceneManager->SetCurrentScene("ingame");
     m_SceneManager->SetCurrentLoadingScene("loading");
 }
 
-const SceneManagement::SceneManager * Application::GetSceneManager() const
+const SceneManager * Application::GetSceneManager() const
 {
     return m_SceneManager;
 }
 
-const Rendering::GameWindow & CBTD::Core::Application::GetWindow() const
+const GameWindow & CBTD::Application::GetWindow() const
 {
     return *m_Window;
 }
@@ -33,7 +31,7 @@ const Rendering::GameWindow & CBTD::Core::Application::GetWindow() const
 void Application::Run()
 {
     sf::RenderWindow* window = m_Window->GetWindow();
-    SceneManagement::SceneRuntime runtime(m_SceneManager, m_Window);
+    SceneRuntime runtime(m_SceneManager, m_Window);
 
     sf::Clock clock;
     m_Running = true;

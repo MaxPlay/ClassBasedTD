@@ -2,18 +2,15 @@
 #include "AssetManager.h"
 #include "Texture.h"
 
-namespace CBTD {
-    namespace Assets {
+namespace CBTD
+{
+    typedef AssetManager<Texture> TextureManager;
 
-        typedef AssetManager<Texture> TextureManager;
+    class AssetManagement
+    {
+        static TextureManager* s_Textures;
 
-        class AssetManagement
-        {
-            static TextureManager* s_Textures;
-
-        public:
-            static TextureManager* GetTextureManager();
-        };
-
-    }
+    public:
+        static TextureManager* GetTextureManager();
+    };
 }

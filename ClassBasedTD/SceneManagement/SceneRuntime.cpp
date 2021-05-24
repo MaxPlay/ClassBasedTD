@@ -4,9 +4,8 @@
 #include "../Rendering/GameWindow.h"
 
 using namespace CBTD;
-using namespace SceneManagement;
 
-SceneRuntime::SceneRuntime(SceneManager * manager, Rendering::GameWindow* window) : m_CurrentClearColor(0, 0, 0, 255)
+SceneRuntime::SceneRuntime(SceneManager* manager, GameWindow* window) : m_CurrentClearColor(0, 0, 0, 255)
 {
     m_Manager = manager;
     m_Window = window;
@@ -99,7 +98,7 @@ void SceneRuntime::SetCurrentClearColor(sf::Color & color)
     m_CurrentClearColor.a = color.a;
 }
 
-Rendering::GameWindow * SceneRuntime::GetWindow() const
+GameWindow * SceneRuntime::GetWindow() const
 {
     return m_Window;
 }

@@ -1,16 +1,15 @@
 #pragma once
 #include <SFML/Graphics/Texture.hpp>
 
-namespace CBTD {
-    namespace Assets {
-        class Texture
-        {
-            sf::Texture m_Texture;
-            std::string m_File;
+namespace CBTD
+{
+    class Texture
+    {
+        sf::Texture m_Texture;
+        std::string m_File;
 
-        public:
-            void Load(std::string file);
-            sf::Texture* GetTexture();
-        };
-    }
+    public:
+        void Load(std::string file);
+        sf::Texture* GetTexture();
+    };
 }

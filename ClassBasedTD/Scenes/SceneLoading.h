@@ -1,9 +1,7 @@
 #pragma once
 
 namespace CBTD {
-    namespace SceneManagement {
-        class SceneManager;
-    }
+    class SceneManager;
 
-    void LoadScenes(SceneManagement::SceneManager* manager);
+    void LoadScenes(SceneManager* manager);
 }

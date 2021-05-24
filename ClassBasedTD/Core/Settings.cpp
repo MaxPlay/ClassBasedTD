@@ -1,7 +1,6 @@
 #include "Settings.h"
 
 using namespace CBTD;
-using namespace Core;
 
 Settings* Settings::s_Instance = 0;
 

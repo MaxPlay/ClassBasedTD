@@ -4,19 +4,16 @@
 
 #include "Game/Players/Player.h"
 
-namespace CBTD {
-    namespace Rendering {
-        namespace Renderers {
-            class PlayerRenderer : public Renderer
-            {
-                const Game::Players::Player* m_Player;
-                sf::CircleShape m_Shape;
+namespace CBTD
+{
+    class PlayerRenderer : public Renderer
+    {
+        const Player* m_Player;
+        sf::CircleShape m_Shape;
 
-            public:
-                PlayerRenderer(Game::Players::Player* player, int priority = 0);
-                ~PlayerRenderer();
-                void Draw(sf::RenderTarget& target);
-            };
-        }
-    }
+    public:
+        PlayerRenderer(Player* player, int priority = 0);
+        ~PlayerRenderer();
+        void Draw(sf::RenderTarget& target);
+    };
 }

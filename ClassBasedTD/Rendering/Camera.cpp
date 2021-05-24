@@ -1,9 +1,8 @@
 #include "Camera.h"
 
 using namespace CBTD;
-using namespace Rendering;
 
-Camera::Camera(sf::RenderTarget * target) : m_target(target)
+Camera::Camera(sf::RenderTarget* target) : m_target(target)
 {
     m_view = sf::View();
     Reset();
@@ -33,7 +32,7 @@ const sf::RenderTarget* Camera::GetTarget() const
     return m_target;
 }
 
-const sf::View & Camera::GetView() const
+const sf::View& Camera::GetView() const
 {
     return m_view;
 }

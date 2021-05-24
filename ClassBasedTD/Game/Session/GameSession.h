@@ -11,7 +11,7 @@ namespace CBTD {
             class GameSession
             {
                 int m_PlayerCount;
-                std::array<Players::Player*, Core::Globals::MAX_PLAYER_COUNT> m_Players;
+                std::array<Player*, Globals::MAX_PLAYER_COUNT> m_Players;
 
             public:
                 GameSession* CreateSession(const GameSessionTemplate& sessionTemplate);
